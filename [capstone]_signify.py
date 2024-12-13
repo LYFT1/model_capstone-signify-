@@ -30,9 +30,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.utils import class_weight
 
-# MediaPipe for hand landmark extraction
-import mediapipe as mp
-
 base_dir = '/content/drive/My Drive/signlanguage/'
 !ls "/content/drive/My Drive/signlanguage/"
 
@@ -159,126 +156,151 @@ print("Jumlah All A", len(os.listdir(A_dir)))
 print("Jumlah train A", len(os.listdir(train_A)))
 print("Jumlah val A", len(os.listdir(validation_A)))
 print("Jumlah test A", len(os.listdir(test_A)))
+print("-------------------------------------------")
 
 print("Jumlah All B", len(os.listdir(B_dir)))
 print("Jumlah train B", len(os.listdir(train_B)))
 print("Jumlah val B", len(os.listdir(validation_B)))
 print("Jumlah test B", len(os.listdir(test_B)))
+print("-------------------------------------------")
 
 print("Jumlah All C", len(os.listdir(C_dir)))
 print("Jumlah train C", len(os.listdir(train_C)))
 print("Jumlah val C", len(os.listdir(validation_C)))
 print("Jumlah test C", len(os.listdir(test_C)))
+print("-------------------------------------------")
 
 print("Jumlah All D", len(os.listdir(D_dir)))
 print("Jumlah train D", len(os.listdir(train_D)))
 print("Jumlah val D", len(os.listdir(validation_D)))
 print("Jumlah test D", len(os.listdir(test_D)))
+print("-------------------------------------------")
 
 print("Jumlah All E", len(os.listdir(E_dir)))
 print("Jumlah train E", len(os.listdir(train_E)))
 print("Jumlah val E", len(os.listdir(validation_E)))
 print("Jumlah test E", len(os.listdir(test_E)))
+print("-------------------------------------------")
 
 print("Jumlah All F", len(os.listdir(F_dir)))
 print("Jumlah train F", len(os.listdir(train_F)))
 print("Jumlah val F", len(os.listdir(validation_F)))
 print("Jumlah test F", len(os.listdir(test_F)))
+print("-------------------------------------------")
 
 print("Jumlah All G", len(os.listdir(G_dir)))
 print("Jumlah train G", len(os.listdir(train_G)))
 print("Jumlah val G", len(os.listdir(validation_G)))
 print("Jumlah test G", len(os.listdir(test_G)))
+print("-------------------------------------------")
 
 print("Jumlah All H", len(os.listdir(H_dir)))
 print("Jumlah train H", len(os.listdir(train_H)))
 print("Jumlah val H", len(os.listdir(validation_H)))
 print("Jumlah test H", len(os.listdir(test_H)))
+print("-------------------------------------------")
 
 print("Jumlah All I", len(os.listdir(I_dir)))
 print("Jumlah train I", len(os.listdir(train_I)))
 print("Jumlah val I", len(os.listdir(validation_I)))
 print("Jumlah test I", len(os.listdir(test_I)))
+print("-------------------------------------------")
 
 print("Jumlah All J", len(os.listdir(J_dir)))
 print("Jumlah train J", len(os.listdir(train_J)))
 print("Jumlah val J", len(os.listdir(validation_J)))
 print("Jumlah test J", len(os.listdir(test_J)))
+print("-------------------------------------------")
 
 print("Jumlah All K", len(os.listdir(K_dir)))
 print("Jumlah train K", len(os.listdir(train_K)))
 print("Jumlah val K", len(os.listdir(validation_K)))
 print("Jumlah test K", len(os.listdir(test_K)))
+print("-------------------------------------------")
 
 print("Jumlah All L", len(os.listdir(L_dir)))
 print("Jumlah train L", len(os.listdir(train_L)))
 print("Jumlah val L", len(os.listdir(validation_L)))
 print("Jumlah test L", len(os.listdir(test_L)))
+print("-------------------------------------------")
 
 print("Jumlah All M", len(os.listdir(M_dir)))
 print("Jumlah train M", len(os.listdir(train_M)))
 print("Jumlah val M", len(os.listdir(validation_M)))
 print("Jumlah test M", len(os.listdir(test_M)))
+print("-------------------------------------------")
 
 print("Jumlah All N", len(os.listdir(N_dir)))
 print("Jumlah train N", len(os.listdir(train_N)))
 print("Jumlah val N", len(os.listdir(validation_N)))
 print("Jumlah test N", len(os.listdir(test_N)))
+print("-------------------------------------------")
 
 print("Jumlah All O", len(os.listdir(O_dir)))
 print("Jumlah train O", len(os.listdir(train_O)))
 print("Jumlah val O", len(os.listdir(validation_O)))
 print("Jumlah test O", len(os.listdir(test_O)))
+print("-------------------------------------------")
 
 print("Jumlah All P", len(os.listdir(P_dir)))
 print("Jumlah train P", len(os.listdir(train_P)))
 print("Jumlah val P", len(os.listdir(validation_P)))
 print("Jumlah test P", len(os.listdir(test_P)))
+print("-------------------------------------------")
 
 print("Jumlah All Q", len(os.listdir(Q_dir)))
 print("Jumlah train Q", len(os.listdir(train_Q)))
 print("Jumlah val Q", len(os.listdir(validation_Q)))
 print("Jumlah test Q", len(os.listdir(test_Q)))
+print("-------------------------------------------")
 
 print("Jumlah All R", len(os.listdir(R_dir)))
 print("Jumlah train R", len(os.listdir(train_R)))
 print("Jumlah val R", len(os.listdir(validation_R)))
 print("Jumlah test R", len(os.listdir(test_R)))
+print("-------------------------------------------")
 
 print("Jumlah All S", len(os.listdir(S_dir)))
 print("Jumlah train S", len(os.listdir(train_S)))
 print("Jumlah val S", len(os.listdir(validation_S)))
 print("Jumlah test S", len(os.listdir(test_S)))
+print("-------------------------------------------")
 
 print("Jumlah All T", len(os.listdir(T_dir)))
 print("Jumlah train T", len(os.listdir(train_T)))
 print("Jumlah val T", len(os.listdir(validation_T)))
 print("Jumlah test T", len(os.listdir(test_T)))
+print("-------------------------------------------")
 
 print("Jumlah All U", len(os.listdir(U_dir)))
 print("Jumlah train U", len(os.listdir(train_U)))
 print("Jumlah val U", len(os.listdir(validation_U)))
 print("Jumlah test U", len(os.listdir(test_U)))
+print("-------------------------------------------")
 
 print("Jumlah All V", len(os.listdir(V_dir)))
 print("Jumlah train V", len(os.listdir(train_V)))
 print("Jumlah val V", len(os.listdir(validation_V)))
 print("Jumlah test V", len(os.listdir(test_V)))
+print("-------------------------------------------")
 
 print("Jumlah All W", len(os.listdir(W_dir)))
 print("Jumlah train W", len(os.listdir(train_W)))
 print("Jumlah val W", len(os.listdir(validation_W)))
 print("Jumlah test W", len(os.listdir(test_W)))
+print("-------------------------------------------")
 
 print("Jumlah All X", len(os.listdir(X_dir)))
 print("Jumlah train X", len(os.listdir(train_X)))
 print("Jumlah val X", len(os.listdir(validation_X)))
 print("Jumlah test X", len(os.listdir(test_X)))
+print("-------------------------------------------")
 
 print("Jumlah All Y", len(os.listdir(Y_dir)))
 print("Jumlah train Y", len(os.listdir(train_Y)))
 print("Jumlah val Y", len(os.listdir(validation_Y)))
 print("Jumlah test Y", len(os.listdir(test_Y)))
+print("-------------------------------------------")
 
 print("Jumlah All Z", len(os.listdir(Z_dir)))
 print("Jumlah train Z", len(os.listdir(train_Z)))
@@ -286,18 +308,18 @@ print("Jumlah val Z", len(os.listdir(validation_Z)))
 print("Jumlah test Z", len(os.listdir(test_Z)))
 
 def train_val_split(source, train, val, test, train_ratio, test_ratio):
-    total_size = len(os.listdir(source))
-    train_size = int(train_ratio * total_size)
-    test_size = int(test_ratio * total_size)
-    val_size = total_size - (train_size + test_size)
+    size = len(os.listdir(source))
+    train_size = int(train_ratio * size)
+    test_size = int(test_ratio * size)
+    val_size = size - (train_size + test_size)
 
     # Randomize the file order
-    randomized = random.sample(os.listdir(source), total_size)
+    randomized = random.sample(os.listdir(source), size)
 
     # Split the dataset for train, test, and validation
     train_files = randomized[0:train_size]
     test_files = randomized[train_size:train_size + test_size]
-    val_files = randomized[train_size + test_size:total_size]
+    val_files = randomized[train_size + test_size:size]
 
     # Copy the dataset to each directory
     for i in train_files:
@@ -319,7 +341,7 @@ def train_val_split(source, train, val, test, train_ratio, test_ratio):
 train_ratio = 0.7
 test_ratio = 0.2
 
-# Pembagian training dan validasi untuk setiap huruf
+# Training, Test and Validation division for each letter
 sources = [A_dir, B_dir, C_dir, D_dir, E_dir, F_dir, G_dir, H_dir, I_dir, J_dir,
            K_dir, L_dir, M_dir, N_dir, O_dir, P_dir, Q_dir, R_dir, S_dir, T_dir,
            U_dir, V_dir, W_dir, X_dir, Y_dir, Z_dir]
@@ -339,23 +361,26 @@ test_dirs = [test_A, test_B, test_C, test_D, test_E, test_F, test_G, test_H, tes
              test_K, test_L, test_M, test_N, test_O, test_P, test_Q, test_R, test_S, test_T,
              test_U, test_V, test_W, test_X, test_Y, test_Z]
 
-# Lakukan train-val-test split untuk setiap huruf
+# Do the train-val-test split for each letter.
 for source, train, val, test in zip(sources, train_dirs, val_dirs, test_dirs):
     train_val_split(source, train, val, test, train_ratio, test_ratio)
 
 pip install mediapipe
 
+# MediaPipe for hand landmark extraction
+import mediapipe as mp
+
 # Define the maximum number of landmarks for both hands (dots when detecting hands).
 # Each hand has 21 landmarks, 3 coordinates (x, y, z).
 # Multiply by 2 for both hands.
-max_hand_landmarks = 21 * 3 * 2
+max_landmark = 21 * 3 * 2
 
 # Initializes the MediaPipe Hands to detect landmarks from images.
 mp_hands = mp.solutions.hands
 
 # Function to pad landmarks to fixed length.
 # This ensures all data has the same shape, even if fewer landmarks are detected.
-def pad_landmarks(landmarks, max_landmarks):
+def pad_for_landmarks(landmarks, max_landmarks):
     if len(landmarks) < max_landmarks:
         # If there are fewer landmarks, pad the array with zero
         return np.pad(landmarks, (0, max_landmarks - len(landmarks)), mode='constant')
@@ -383,27 +408,27 @@ def extract_hand_landmarks(image):
                 mp.solutions.drawing_utils.draw_landmarks(image, hand_landmark, mp_hands.HAND_CONNECTIONS)
 
     # Pad or truncate the landmarks to ensure consistent size.
-    padded_hand_landmarks = pad_landmarks(hand_landmarks, max_hand_landmarks)
+    padded_hand_landmarks = pad_for_landmarks(hand_landmarks, max_landmark)
 
     # Return the processed landmarks and the image
     return np.array(padded_hand_landmarks), image
 
 # Function to extract and process both hand landmarks and the image.
-def extract_and_process_hand_landmarks(image):
+def process_hand_landmarks(image):
     hand_landmarks, _ = extract_hand_landmarks(image)
 
     # Resize the image to a fixed size and normalize pixel value to a range of 0-1
-    image_resized = cv2.resize(image, (img_size, img_size)) / 255.0
+    image_resize = cv2.resize(image, (img_size, img_size)) / 255.0
 
     # Combine the image and hand landmarks into a single vector
-    combined_input = np.concatenate([image_resized.flatten(), hand_landmarks])
+    combined_input = np.concatenate([image_resize.flatten(), hand_landmarks])
 
     return combined_input
 
 # Set the image size to 32 and class names (A-Z).
 img_size = 32
 class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-num_classes = len(class_names)
+number_classes = len(class_names)
 
 # Initialize lists to store data and labels.
 data = []
@@ -417,7 +442,7 @@ for class_idx, class_name in enumerate(class_names):
         image = cv2.imread(image_path)
 
         if image is not None:
-            combined_input = extract_and_process_hand_landmarks(image)
+            combined_input = process_hand_landmarks(image)
             data.append(combined_input)
             labels.append(class_idx)
         else:
@@ -428,7 +453,7 @@ X = np.array(data)
 y = np.array(labels)
 
 # One-hot encode the labels for compatibility with the classifier.
-y = tf.keras.utils.to_categorical(y, num_classes)
+y = tf.keras.utils.to_categorical(y, number_classes)
 
 # Split the data into training and testing sets (80% training, 20% testing).
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -443,26 +468,29 @@ class_weights = class_weight.compute_class_weight(
 # Convert class weights to dictionary format for model compatibility.
 class_weights = dict(enumerate(class_weights))
 
-#94
+# Split the image and landmark data for training and Test.
+def split_data(X, img_size):
+    images = X[:, :img_size * img_size * 3].reshape(-1, img_size, img_size, 3)
+    landmarks = X[:, img_size * img_size * 3:]
+    return images, landmarks
+
 # Landmark input layer
 # This layer takes hand landmarks as input, with a fixed shape based on the number of landmarks.
-landmark_input = tf.keras.layers.Input(shape=(max_hand_landmarks,))
-x = tf.keras.layers.Dense(128, activation='relu')(landmark_input)
+landmarkInput = tf.keras.layers.Input(shape=(max_landmark,))
+x = tf.keras.layers.Dense(128, activation='relu')(landmarkInput)
 x = tf.keras.layers.BatchNormalization()(x)
 x = tf.keras.layers.Dense(64, activation='relu')(x)
 x = tf.keras.layers.BatchNormalization()(x)
 
 # Image input layer
 # This layer takes image data as input, reshaped to a fixed size (img_size x img_size x 3).
-image_input = tf.keras.layers.Input(shape=(img_size, img_size, 3))
-y = tf.keras.layers.Conv2D(32, (3, 3), activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.001))(image_input)
+imageInput = tf.keras.layers.Input(shape=(img_size, img_size, 3))
+y = tf.keras.layers.Conv2D(32, (3, 3), activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.001))(imageInput)
 y = tf.keras.layers.MaxPooling2D((2, 2))(y)
 y = tf.keras.layers.BatchNormalization()(y)
-
 y = tf.keras.layers.Conv2D(64, (3, 3), activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.001))(y)
 y = tf.keras.layers.MaxPooling2D((2, 2))(y)
 y = tf.keras.layers.BatchNormalization()(y)
-
 y = tf.keras.layers.Conv2D(128, (3, 3), activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.001))(y)
 y = tf.keras.layers.MaxPooling2D((2, 2))(y)
 y = tf.keras.layers.BatchNormalization()(y)
@@ -471,13 +499,13 @@ y = tf.keras.layers.BatchNormalization()(y)
 y = tf.keras.layers.GlobalAveragePooling2D()(y)
 
 # Combine the processed image features and hand landmarks features into a single vector.
-combined = tf.keras.layers.Concatenate()([x, y])
-combined = tf.keras.layers.Dense(256, activation='relu')(combined)
-combined = tf.keras.layers.Dropout(0.5)(combined)
-output = tf.keras.layers.Dense(num_classes, activation='softmax')(combined)
+landmark_and_image = tf.keras.layers.Concatenate()([x, y])
+landmark_and_image = tf.keras.layers.Dense(256, activation='relu')(landmark_and_image)
+landmark_and_image = tf.keras.layers.Dropout(0.5)(landmark_and_image)
+output = tf.keras.layers.Dense(number_classes, activation='softmax')(landmark_and_image)
 
 # Define the model with two inputs (landmark_input, image_input) and one output.
-model = tf.keras.Model(inputs=[landmark_input, image_input], outputs=output)
+model = tf.keras.Model(inputs=[landmarkInput, imageInput], outputs=output)
 
 # Compile model
 optimizers = tf.keras.optimizers.Adam(learning_rate=0.0001)
@@ -488,8 +516,7 @@ early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5
 
 # Prepare training data:
 # Split the image and landmark data for training.
-X_train_images = X_train[:, :img_size*img_size*3].reshape(-1, img_size, img_size, 3)
-X_train_landmarks = X_train[:, img_size*img_size*3:]
+X_train_images, X_train_landmarks = split_data(X_train, img_size)
 
 # Train model
 history = model.fit(
@@ -503,8 +530,7 @@ history = model.fit(
 )
 
 # Prepare test data for evaluation.
-X_test_images = X_test[:, :img_size*img_size*3].reshape(-1, img_size, img_size, 3)
-X_test_landmarks = X_test[:, img_size*img_size*3:]
+X_test_images, X_test_landmarks = split_data(X_test, img_size)
 
 # Evaluate the model using the test data and print the accuracy.
 test_loss, test_accuracy = model.evaluate([X_test_landmarks, X_test_images], y_test)
@@ -546,9 +572,9 @@ with open('model_paling_terakhir.tflite', 'wb') as f:
 
 # Extract data for accuracy and loss from the training history
 train_accuracy = history.history['accuracy']
-val_accuracy = history.history['val_accuracy']
+validation_accuracy = history.history['val_accuracy']
 train_loss = history.history['loss']
-val_loss = history.history['val_loss']
+validation_loss = history.history['val_loss']
 
 # Get number of epochs
 epochs = range(1, len(train_accuracy) + 1)
@@ -556,20 +582,20 @@ epochs = range(1, len(train_accuracy) + 1)
 # Create subplots for visualizing the accuracy and loss
 plt.figure(figsize=(8, 6))
 
-# Plot accuracy
+# Plot for Accuracy
 plt.subplot(2, 1, 1)  # (rows, columns, subplot index)
 plt.plot(epochs, train_accuracy, 'b-', label='Training Accuracy')
-plt.plot(epochs, val_accuracy, 'r-', label='Validation Accuracy')
+plt.plot(epochs, validation_accuracy, 'r-', label='Validation Accuracy')
 plt.title('Training and Validation Accuracy')
 plt.xlabel('Epochs')
 plt.ylabel('Accuracy')
 plt.legend()
 plt.grid()
 
-# Plot loss
+# Plot for Loss
 plt.subplot(2, 1, 2)
 plt.plot(epochs, train_loss, 'b-', label='Training Loss')
-plt.plot(epochs, val_loss, 'r-', label='Validation Loss')
+plt.plot(epochs, validation_loss, 'r-', label='Validation Loss')
 plt.title('Training and Validation Loss')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
@@ -577,7 +603,7 @@ plt.legend()
 plt.grid()
 
 # Show the plots
-plt.tight_layout()  # Adjust layout to prevent overlap
+plt.tight_layout()
 plt.show()
 
 """---------------------------------------------------------------------------"""
